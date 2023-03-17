@@ -13,11 +13,11 @@ body
 }
 @font-face {
     font-family: 'mainfont';
-    src: url('/assets/img/Hero-Regular.ttf') format('truetype');
+    src: url('../img/Hero-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'conFont';
-    src: url('/assets/img/Opensea.ttf') format('truetype');
+    src: url('../img/Opensea.ttf') format('truetype');
 }
 
 .switch {
