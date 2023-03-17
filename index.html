@@ -5,12 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
     <link rel="stylesheet" href="https://free-font-awesome-pro.vercel.app/css/all.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/respondsive.css">
-    <title>Rythm Ranker</title>
+    <title>Hit Ranker</title>
 </head>
 <body>
+    <div class="modal hidden">
+        <div class="modal-content">
+            <span id="close">⨉</span>
+            <div><span class="country-name">SELECT A COUNTRY</span></div>
+            <div class="country">
+                <i class="flag-icon flag-icon-us fa-3x"></i>
+                <i class="flag-icon flag-icon-ng fa-3x"></i>
+            </div>
+        </div>
+    </div>
     <i class="fad fa-globe-africa globe"></i>
     <label class="switch">
         <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffff"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
@@ -143,45 +154,23 @@
     <menu class="menu">
     
         <button class="menu__item active" style="--bgColorItem: white;" >
-          <svg class="icon" viewBox="0 0 24 24">
-            <path d="M3.8,6.6h16.4"/>
-            <path d="M20.2,12.1H3.8"/>
-            <path d="M3.8,17.5h16.4"/>
-          </svg>
+            <i class="fas fa-list-music fa-2x icon"></i>
         </button>
     
         <button class="menu__item" style="--bgColorItem: white;">
-          <svg class="icon" viewBox="0 0 24 24">
-            <path  d="M6.7,4.8h10.7c0.3,0,0.6,0.2,0.7,0.5l2.8,7.3c0,0.1,0,0.2,0,0.3v5.6c0,0.4-0.4,0.8-0.8,0.8H3.8
-            C3.4,19.3,3,19,3,18.5v-5.6c0-0.1,0-0.2,0.1-0.3L6,5.3C6.1,5,6.4,4.8,6.7,4.8z"/>
-            <path  d="M3.4,12.9H8l1.6,2.8h4.9l1.5-2.8h4.6"/>
-          </svg>
+            <i class="fab fa-youtube fa-2x  icon"></i>
         </button>
     
         <button class="menu__item" style="--bgColorItem: white;" >
-          <svg class="icon" viewBox="0 0 24 24">
-          <path  d="M3.4,11.9l8.8,4.4l8.4-4.4"/>
-          <path  d="M3.4,16.2l8.8,4.5l8.4-4.5"/>
-          <path  d="M3.7,7.8l8.6-4.5l8,4.5l-8,4.3L3.7,7.8z"/>
-          </svg>
+            <i class="fab fa-spotify fa-2x  icon"></i>
         </button>
     
         <button class="menu__item" style="--bgColorItem: white;" > 
-          <svg class="icon" viewBox="0 0 24 24" >
-            <path  d="M5.1,3.9h13.9c0.6,0,1.2,0.5,1.2,1.2v13.9c0,0.6-0.5,1.2-1.2,1.2H5.1c-0.6,0-1.2-0.5-1.2-1.2V5.1
-              C3.9,4.4,4.4,3.9,5.1,3.9z"/>
-            <path  d="M4.2,9.3h15.6"/>
-            <path  d="M9.1,9.5v10.3"/>
-           </svg>
+            <i class="fab fa-apple fa-2x  icon"></i>
         </button>
     
         <button class="menu__item" style="--bgColorItem:white;">
-          <svg class="icon" viewBox="0 0 24 24" >
-            <path  d="M5.1,3.9h13.9c0.6,0,1.2,0.5,1.2,1.2v13.9c0,0.6-0.5,1.2-1.2,1.2H5.1c-0.6,0-1.2-0.5-1.2-1.2V5.1
-              C3.9,4.4,4.4,3.9,5.1,3.9z"/>
-            <path  d="M5.5,20l9.9-9.9l4.7,4.7"/>
-            <path  d="M10.4,8.8c0,0.9-0.7,1.6-1.6,1.6c-0.9,0-1.6-0.7-1.6-1.6C7.3,8,8,7.3,8.9,7.3C9.7,7.3,10.4,8,10.4,8.8z"/>
-          </svg>
+            <i class="fas fa-list-alt fa-2x icon"></i>
         </button>
     
         <div class="menu__border"></div>

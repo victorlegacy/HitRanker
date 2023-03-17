@@ -252,13 +252,28 @@ body
         background-position: 100% 0;
     }
 }
+.country {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+.country-name
+{
+  margin: 0;
+  padding: 0;
+}
+.black
+{
+  color: black;
+}
 .featuring
 {
     
     position: relative;
     top: -100px;
     overflow: scroll;
-    height: 50vh;
+    height: 54vh;
 }
 .featuring>p
 {
@@ -293,10 +308,53 @@ body
     position: absolute;
     display: inline-block;
     top: 0.5rem;
-    right: 3rem;
-    width: 64px;
+    right: 5rem;
+    width: 34px;
     height: 34px;
-    z-index: 100;
+    z-index: 300;
+}
+.modal
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1c1c1cb4;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content
+{
+    width: 30rem;
+    height: 20rem;
+    background-color: #1c1c1c;
+    z-index: 201;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+}
+.hidden
+{
+    display: none;
+}
+.modal-content>span
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    font-weight: 600;
+}
+.modal-content>span:hover
+{
+    color: red;
+    font-size: 45px;
+    font-weight: 800;
 }
 
 
@@ -312,6 +370,7 @@ body
     position: fixed;
     /* background-color: var(--bgColorMenu); */
     background: #1c1c1c;
+    height: 3.5rem;
     bottom: 0;
     right: 0;
     border-top:1px rgba(255, 255, 255, 0.225) solid;
@@ -353,6 +412,11 @@ body
 
 }
 
+.active>.icon {
+  color: black !important;
+
+}
+
 .menu__item.active::before{
     
     transform: scale(1);
@@ -364,29 +428,20 @@ body
     
     width: 2.6em;
     height: 2.6em;
-    stroke: #fff;
-    fill: transparent;
-    stroke-width: 1pt;
-    stroke-miterlimit: 10;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-dasharray: 400;
-    
+    color: #fff;
+    display: grid;
+    place-items: center;
 }
 .menu__item.active .icon {
     animation: stroke 4.5s reverse;
     transition: background-color .9s;
-    stroke: #1c1c1c;
+    color: #1c1c1c;
 }
 
-@keyframes strok {
-
+@keyframes stroke {
     100% {
-
         stroke-dashoffset: 400;
-
     }
-    
 }
 
 .menu__border{
