@@ -110,3 +110,9 @@ window.addEventListener("resize", () => {
   offsetMenuBorder(activeItem, menuBorder);
   menu.style.setProperty("--timeOut", "none");
 });
+
+window.addEventListener('load', function() {
+  var preloader = document.getElementById('preloader');
+  preloader.style.display = 'none';
+});
+
