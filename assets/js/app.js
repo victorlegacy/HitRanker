@@ -113,6 +113,9 @@ window.addEventListener("resize", () => {
 
 window.addEventListener('load', function() {
   var preloader = document.getElementById('preloader');
-  preloader.style.display = 'none';
+  function wait(){
+    preloader.style.display = 'none';
+  }
+  setTimeout(wait,8000)
 });
 

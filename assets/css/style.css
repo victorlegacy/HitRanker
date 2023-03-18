@@ -605,9 +605,10 @@ body
 
 
 #loader {
-  width: 80px;
-  height: 50px;
+  width: 180px;
+  height: 10px;
   position: relative;
+  margin-top: -80%;
 }
 
 .loader-text {
@@ -622,7 +623,7 @@ body
 }
 
 .load {
-  background-color: purple;
+  background-color: rgb(255, 255, 255);
   border-radius: 50px;
   display: block;
   height: 16px;
@@ -638,7 +639,7 @@ body
   content: "";
   width: 100%;
   height: 100%;
-  background-color: cyan;
+  background-color:grey;
   border-radius: inherit;
   animation: loading2_713 3.5s ease both infinite;
 }
@@ -738,3 +739,6 @@ body
   place-items: center;
 }
 
+#loader-img{
+  margin-bottom: -70%;
+}
